@@ -1,6 +1,6 @@
 use chat_room::{get_router, AppConfig};
 use tokio::net::TcpListener;
-use tracing::{info, level_filters::LevelFilter, warn};
+use tracing::{info, level_filters::LevelFilter};
 use tracing_subscriber::{fmt::Layer, layer::SubscriberExt, util::SubscriberInitExt, Layer as _};
 use anyhow::Result;
 
