@@ -1,3 +1,4 @@
+-- Add migration script here
 CREATE TABLE IF NOT EXISTS users (
   id bigserial PRIMARY KEY,
   fullname varchar(64) NOT NULL,
@@ -26,7 +27,7 @@ CREATE TABLE IF NOT EXISTS chats (
 -- create message table
 CREATE TABLE IF NOT EXISTS messages (
   id bigserial PRIMARY KEY,
-  chat_id bigint NOT NULL REFERENCES chats(id),,
+  chat_id bigint NOT NULL REFERENCES chats(id),
   sender_id bigint NOT NULL REFERENCES users(id),
   content text NOT NULL,
   created_at timestamptz DEFAULT CURRENT_TIMESTAMP
